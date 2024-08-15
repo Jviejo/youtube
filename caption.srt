@@ -1,0 +1,15 @@
+{
+  "error": {
+    "code": 403,
+    "message": "The permissions associated with the request are not sufficient to download the caption track. The request might not be properly authorized, or the video order might not have enabled third-party contributions for this caption.",
+    "errors": [
+      {
+        "message": "The permissions associated with the request are not sufficient to download the caption track. The request might not be properly authorized, or the video order might not have enabled third-party contributions for this caption.",
+        "domain": "youtube.caption",
+        "reason": "forbidden",
+        "location": "id",
+        "locationType": "parameter"
+      }
+    ]
+  }
+}
