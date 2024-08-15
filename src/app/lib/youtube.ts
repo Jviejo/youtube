@@ -1,6 +1,5 @@
 "use server";
 
-import { YoutubeTranscript } from 'youtube-transcript';
 export async function getYoutubeTranscript(videoId: string) {
     const response = await fetch(`https://www.youtube.com/watch?v=${videoId}`)
     const data = await response.text()
