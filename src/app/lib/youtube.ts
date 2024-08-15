@@ -1,7 +1,10 @@
 "use server";
 
 export async function getYoutubeTranscript(videoId: string) {
-    const response = await fetch(`https://www.youtube.com/watch?v=${videoId}`)
+    // set a header to avoid 403 error
+    const headers = new Headers()
+    headers.set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3")
+    const response = await fetch(`https://www.youtube.com/watch?v=${videoId}`, { headers })
     const data = await response.text()
     const pos1 = data.indexOf("www.youtube.com/api/timedtext")
     console.log("cadena",pos1)
